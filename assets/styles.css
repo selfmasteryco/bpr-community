@@ -260,7 +260,8 @@ strong { color: inherit; font-weight: 700; }
 
 /* ---------- section headers ---------- */
 
-.section-head { max-width: 720px; margin-bottom: clamp(36px, 5vw, 52px); }
+.section-head { max-width: 840px; margin-bottom: clamp(36px, 5vw, 52px); }
+.section-head .lede { max-width: none; }
 .section-head.center { max-width: 680px; margin-left: auto; margin-right: auto; text-align: center; }
 .section-head h2 { margin-bottom: 16px; color: var(--ink); }
 .section-alt { background: var(--surface-light); }
