@@ -69,3 +69,23 @@ if ("IntersectionObserver" in window && revealTargets.length) {
 } else {
   revealTargets.forEach((el) => el.classList.add("in-view"));
 }
+
+// Referral attribution. A promoter link like ...?ref=john tags the Stripe
+// checkout with client_reference_id=john, so every sale in Stripe shows who
+// drove it. No ref in the URL means a plain, untagged checkout.
+(function () {
+  function tagRefs() {
+    var params = new URLSearchParams(location.search);
+    var ref = (params.get("ref") || params.get("via") || "").trim();
+    ref = ref.replace(/[^a-zA-Z0-9_-]/g, "").slice(0, 40); // keep it clean and safe
+    if (!ref) return;
+    var links = document.querySelectorAll('a[href*="buy.stripe.com"]');
+    for (var i = 0; i < links.length; i++) {
+      var url = links[i].getAttribute("href");
+      if (url.indexOf("client_reference_id=") !== -1) continue;
+      links[i].setAttribute("href", url + (url.indexOf("?") === -1 ? "?" : "&") + "client_reference_id=" + encodeURIComponent(ref));
+    }
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", tagRefs);
+  else tagRefs();
+})();
