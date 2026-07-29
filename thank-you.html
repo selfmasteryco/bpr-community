@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>You're in — Blueprint Reloaded Community</title>
+<meta name="robots" content="noindex" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+<!--
+  ============================================================
+  SET THIS AS YOUR STRIPE PAYMENT LINK'S "AFTER PAYMENT" REDIRECT.
+
+  The join button below points to the live WhatsApp Community
+  invite link. To change it later, edit the href on the
+  "Request to join the community" button.
+
+  Intended flow (Option A, no backend):
+  - Stripe collects the buyer's WhatsApp number at checkout
+    (phone field + a required "WhatsApp number" custom field).
+  - This page shows the community invite link after payment.
+  - The community's announcement group has "Approve new members"
+    turned ON, so a leaked link cannot get anyone in. An admin
+    approves each request only if the requesting number matches a
+    paid customer.
+  - Churn removal is manual for now: Stripe shows who lapsed, an
+    admin removes them from the group.
+
+  Note: this page shows the same static invite link to everyone
+  who reaches it. The approval gate is what makes that safe. If
+  link leakage ever becomes a problem, add a small serverless
+  function that verifies the Stripe session before revealing the
+  link (payment-gated link). Full auto-remove on churn would need
+  the WhatsApp Business API or a managed platform, a separate build.
+  ============================================================
+-->
+
+<main class="ty-screen">
+  <div class="ty-card">
+    <span class="eyebrow-line">PAYMENT CONFIRMED</span>
+    <h1>You're in the community.</h1>
+    <p class="lede">You're one tap from the Blueprint Reloaded Community. Requests are approved by an admin, usually within a few hours, then you're in. Group coaching exercise calls run 5 times a week.</p>
+
+    <a class="btn btn-cta btn-block" href="https://chat.whatsapp.com/IFTjkXf7kz97Ze74YDvQQq">Request to join the community</a>
+
+    <ul class="ty-steps">
+      <li>1. Tap the button above and request to join.</li>
+      <li>2. Request from the same WhatsApp number you entered at checkout. That is how we confirm your spot and approve you.</li>
+      <li>3. Once you're approved, say hello. The next call is coming up this week.</li>
+    </ul>
+
+    <div class="ty-bonus">
+      <p class="ty-bonus-label">Your 3 bonus course logins</p>
+      <p class="ty-bonus-text">Access to Endless Motivation 2.0, Blueprint Reloaded Gold, and Owen's Last Game Program is sent to the email you used at checkout. Check your inbox, and your spam folder, shortly after joining.</p>
+    </div>
+
+    <p class="hero-fineprint">Joined with a different number, or not approved within a day? Reply to your Stripe receipt email and we'll add you directly.</p>
+  </div>
+</main>
+
+</body>
+</html>
