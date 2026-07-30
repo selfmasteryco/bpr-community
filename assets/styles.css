@@ -161,6 +161,8 @@ strong { color: inherit; font-weight: 700; }
 .nav-mark .mark-accent { color: var(--accent); }
 .nav-mark .mark-sub { font-family: var(--font-body); font-weight: 800; font-size: 0.6rem; letter-spacing: 0.42em; text-transform: uppercase; color: var(--silver); margin-top: 4px; padding-left: 2px; }
 .nav .btn { padding: 11px 22px; font-size: 0.85rem; }
+.nav-mark .brand-logo { height: 38px; width: auto; display: block; }
+footer .nav-mark .brand-logo { height: 46px; }
 
 /* ---------- hero: full-bleed photo + scrim ---------- */
 
