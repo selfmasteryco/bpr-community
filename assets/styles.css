@@ -249,7 +249,9 @@ footer .nav-mark .brand-logo { height: 46px; }
 .icon-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(16px, 2.2vw, 32px); text-align: center; align-items: start; }
 @media (max-width: 480px) { .icon-row { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 680px) { .icon-row-item h3 { font-size: 0.95rem; } .icon-row-item p { font-size: 0.82rem; } .icon-row-item svg, .icon-row-item .icon-wa { width: 28px; height: 28px; margin-bottom: 10px; } }
-.icon-section { padding-top: clamp(22px, 3.5vw, 40px); padding-bottom: clamp(22px, 3.5vw, 40px); }
+.icon-section { padding-top: clamp(14px, 2.2vw, 26px); padding-bottom: clamp(22px, 3.5vw, 40px); }
+/* kill dead space between the drills section and the icon row that follows it */
+section:has(+ .icon-section) { padding-bottom: clamp(16px, 2.5vw, 30px); }
 .icon-section + section { padding-top: clamp(22px, 3.5vw, 40px); }
 .icon-row-item { display: flex; flex-direction: column; align-items: center; }
 .icon-row-item svg { width: 34px; height: 34px; color: var(--accent); margin-bottom: 16px; }
