@@ -189,6 +189,8 @@ footer .nav-mark .brand-logo { height: 46px; }
 /* full-width hero headline band */
 .hero-eyebrow { grid-column: 1 / -1; margin-bottom: 2px; }
 .hero-headline { grid-column: 1 / -1; font-size: clamp(1.35rem, 3.1vw, 2.6rem); line-height: 1.08; margin-bottom: 16px; max-width: none; }
+.hero-headline .hl-teal { color: var(--teal-bright); }
+.hero-headline .nowrap { white-space: nowrap; }
 @media (max-width: 960px) {
   .hero .wrap { grid-template-columns: 1fr; }
   /* Owen sits on the right of the photo, so pin the crop to the right edge on narrow screens */
