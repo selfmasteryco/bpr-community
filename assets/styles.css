@@ -67,7 +67,7 @@ a { color: inherit; }
 
 .wrap { width: 100%; max-width: var(--content-width); margin: 0 auto; padding: 0 24px; }
 
-section { padding: clamp(56px, 8vw, 104px) 0; }
+section { padding: clamp(38px, 5vw, 62px) 0; }
 
 h1, h2, h3 {
   font-family: var(--font-heading);
